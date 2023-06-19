@@ -1,0 +1,11 @@
+# tasks/main.yml
+- name: Install Nginx package
+  yum:
+    name: "{{ nginx_package }}"
+    state: present
+
+- name: Start Nginx service
+  service:
+    name: "{{ nginx_service }}"
+    state: started
+    enabled: yes
