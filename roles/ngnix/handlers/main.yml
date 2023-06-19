@@ -1,0 +1,5 @@
+# handlers/main.yml
+- name: Restart Nginx
+  service:
+    name: "{{ nginx_service }}"
+    state: restarted
